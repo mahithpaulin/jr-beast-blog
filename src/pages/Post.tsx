@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import { useParams, Link } from "wouter";
 import { motion } from "framer-motion";
 import { posts } from "@/data/posts";
@@ -67,10 +67,10 @@ export default function Post() {
                 return (
                   <p key={index} className="text-muted-foreground leading-relaxed mb-8">
                     {paragraph.split('\n').map((line, i) => (
-                      <React.Fragment key={i}>
+                      <span key={i}>
                         {line}
                         {i < paragraph.split('\n').length - 1 && <br />}
-                      </React.Fragment>
+                      </span>
                     ))}
                   </p>
                 );
